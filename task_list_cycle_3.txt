@@ -1,0 +1,248 @@
+*******************************************************************************************************************************
+Cycle 1
+*******************************************************************************************************************************
+Task 1
+Description
+
+In one circular table there are exactly 3N voters from political parties named A, B and C. There are exactly N voters from each party.
+Every voter wants his immediate neighbour (left or right) to be from different parties (also different from his party).
+For example, voter A can sit in one of two options: left neighbour B, right neighbour C or left neighbour C, right neighbour B.
+Other options aren’t allowed. Two voters can stand up and swap their places.
+Find the least number of swaps such that every voter sits between voters from different parties.
+Input
+In the first line you are given a natural number N (1 <= N <= 100 000)
+In the second line you are given an array of 3N chars (every char is ‘A’, ‘B’ or ‘C’)
+Output
+In the first and only line of output print the least number of swaps.
+
+Input
+2
+ABCABC
+
+Output
+0
+
+Input
+2
+ABBCCA
+
+Output
+2
+Explanation: if voters from indices (starting from 1) 1 and 5 swaps then we get configuration CBBCAA,
+and then voters with indices 2 and 6 swap their places and we get configuration CABCAB which is valid.
+It's not possible to get valid configuration with less than 2 swaps.
+--------------------------------------------------------------------------------------------------------------------------------
+Task 2
+Description
+
+Wayne is a crazy scientist who knows how to shrink his surroundings. Unfortunately for him,
+this time he managed to shrink himself to the size of a centimeter. After jumping around in his laboratory he managed to reach a
+telephone and now he wants to make an SOS call, hoping that someone would be able to help him.
+A picture below shows the keyboard layout of the telephone:
+```
+1 | 2 | 3
+---+---+---
+4 | 5 | 6
+---+---+---
+7 | 8 | 9
+---+---+---
+| 0 | CALL
+```
+Initially, Wayne stands on the button 0. In each second he can move to the adjacent button (to the left, right, top or bottom),
+or jump on the current button which triggers the press event. Given the number of the SOS service, help Wayne determine the minimal
+time in seconds to make the call.
+Explanation
+Input
+The first line contains the number of the SOS service, consisting of at most 100 digits.
+Output
+Print the minimal time in seconds to call the SOS service.
+Example
+Input:
+85
+
+Output:
+8
+Explanation:
+One way to call the SOS in 8 seconds is the following: 1. Move from 0 to 8 2. Jump on 8 3. Move from 8 to 5 4. Jump on 5 5.
+Move from 5 to 8 6. Move from 8 to 9 7. Move from 9 to CALL 8. Jump on CALL
+--------------------------------------------------------------------------------------------------------------------------------
+Task 3
+Description
+
+Since a new social network called Happy Society has emerged, N members labeled with numbers from 1 to N have created new accounts.
+Each member can add other members as their friends. Friendships are mutual, meaning if person A is a friend to person B,
+then person B is a friend to person A.
+
+Due to a promo campaign on the social network to increase the total number of friendships, all members decided to get involved.
+Every morning, each member goes through their friends' friend list and writes all members' labels on a piece of paper.
+To be more precise, member A will write down member C's label if C is not friend of A, but there is a member B that is a mutual friend of A and C.
+In the evening, each member will send friend requests to all the members he marked earlier that day.
+
+Given the initial list of friendships, determine the number of days that will pass until everyone is friends with everyone else.
+Input
+First line contains natural numbers N (1 <= N <= 4000) and M (1 <= M <= 10000), the number of users and friendships.
+M lines follow, each representing one friendship in form of two numbers A and B (1 <= A, B <= N, A != B), as the labels of two users
+that are friends at the beginning of the campaign.
+Output
+Print the number of days from the task description. If it's not possible to make everyone friends with everyone else, print -1.
+Examples
+Input:
+4 3
+1 2
+2 3
+3 4
+
+Output:
+2
+
+Explanation:
+After the first day, the following friendships will appear: (1, 3) and (2, 4). After the second day, friendship (1, 4) will appear and
+everyone will be friends with everyone else.
+
+Input:
+3 3
+1 2
+2 3
+1 3
+
+Output:
+0
+
+Explanation:
+Everyone is friends with everyone else at the beginning.
+
+Input:
+4 2
+1 2
+3 4
+
+Output:
+-1
+
+Explanation:
+Users 1 and 2 will never become friends with users 3 and 4.
+--------------------------------------------------------------------------------------------------------------------------------
+Task 4
+Description
+
+Mirko wants to send a secret message to his friend Slavko. He is afraid that the message could end up in the wrong hands, so he decided to encrypt it.
+Let's denote the original message with S, and the encrypted message with P. At the beginning, the string P is empty and
+Mirko is going to construct it in several steps:
+
+He selects all characters at odd positions in string S, and adds them to the end of string P.
+He removes the selected characters from string S.
+If the string S becomes empty, the process finishes with P being the encrypted message. Otherwise, the procedure repeats from step 1.
+
+Let’s demonstrate how to encrypt the message “superman”:
+
+P = “”
+S = “superman”
+P = “spra”
+S = “uemn”
+P = “spraum”
+S = “en”
+P = “spraume”
+S = “n”
+P = “spraumen”
+S = “”
+
+Input
+The first line contains the encrypted message P containing only lowercase letters of the English alphabet.
+The message will consist of at most 1 000 000 characters.
+Output
+Print the original message S.
+Examples
+Input:
+spraumen
+Output:
+superman
+Input:
+hloolewdlr
+Output:
+helloworld
+--------------------------------------------------------------------------------------------------------------------------------
+Task 5
+Description
+
+Mirko has N bottles of water. Every bottle has a certain number of deciliters. Mirko knows that in next month he can drink X deciliters of water maximum.
+Find the largest number of empty bottles after one month, which Mirko can drink.
+Input
+In the first line you are given natural numbers N and X separated by space (1 <= N <= 100, 1 <= X <= 10000)
+In the second line you are given N natural numbers separated by spaces which represent amount of deciliters in each of N bottles.
+Deciliters are between 1 and 1000 (inclusive)
+Output
+In the first and only line of output print largest number of empty bottles.
+
+Input
+3 8
+3 1 4
+
+Output
+3
+
+Input
+5 14
+6 8 7 10 9
+
+Output 2
+Explanation: Mirko can empty bottles with indices (starting from 1) (1, 3) or (1, 2) - largest number of bottle is 2. Mirko can't empty more than 2 bottles.
+--------------------------------------------------------------------------------------------------------------------------------
+Task 6
+Description
+
+Mirko wrote a natural number which consists of N digits on paper. Slavko came to Mirko’s house and replaced some digits with question marks on the paper.
+Slavko didn’t change more than 5 digits. Mirko forgot the initial number he wrote.
+Slavko gave him a task to count the number of natural numbers which Mirko could have written in the beginning, such that they are divisible by K.
+Input
+In the first line you are given the numbers N and K separated by space. (1 <= N <= 100, 1 <= K <= 100)
+In the second line you are given N chars which represent Mirko’s number after Slavko replaced some digits with question marks.
+Chars can only be digits [0-9] or question marks '?'.
+Output
+In the first line of output write the solution to Mirko's task.
+Scoring
+In 20% of tests (1 <= N <= 6 and number of question marks = 1)
+In the next 10% of tests (1 <= N <= 6 and number of question marks <= 3)
+In the next 20% of tests (1 <= N <= 9 and number of question marks <= 3)
+In the next 10% of tests (1 <= N <= 9 and number of question marks <= 5)
+In the next 20% of tests (1 <= N <= 18 and number of question marks <= 5)
+In the last 20% of tests (1 <= N <= 100 and number of question marks <= 5)
+
+
+Input
+2 5
+2?
+
+Output
+2
+
+Input
+2 3
+?3
+
+Output 3
+Explanation: Mirko's initial numbers could be 33, 63, 93
+--------------------------------------------------------------------------------------------------------------------------------
+Task 7
+Description
+
+There’s an expression written on a piece of paper in the following way:
+A op1 B op2 C op3 D
+Each operator (opi) can be either a + or a -. Given the values of A, B, C and D, determine the operators op1, op2 and op3 such
+that the given expression gives the largest possible result. You may assume that the answer will be unique.
+Input
+The first line contains four integers A, B, C, D (-100 <= A, B, C, D <= 100, A, B, C, D != 0).
+Output
+The three operators (+ or -).
+Examples
+
+Input
+4 8 -1 2
+
+Output
++-+
+
+Input
+10 10 10 10
+
+Output
++++

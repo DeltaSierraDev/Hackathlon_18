@@ -1,0 +1,263 @@
+*******************************************************************************************************************************
+Cycle 2
+*******************************************************************************************************************************
+Task 1
+Description
+
+Mirko and Slavko live in a long street consisting of N houses (N is always an even number).
+Each house is labeled with a house number ranging from 1 to N. Even numbers are located on one side,
+and odd numbers are on the other side of the road (as shown on the picture below).
+https://problems.sphere-engine.com/problems/STREET/resources/get/slika.png
+Mirko, who lives in the house labeled A, wants to visit his friend Slavko who lives in the house labeled B.
+It takes one minute for Mirko to cross the road or move to the neighboring house on the same side of the road.
+Help Mirko and determine the time required to get from his house
+to Slavko’s house.
+
+Input
+The first line contains positive integers A and B (1 <= A, B <= 30), Mirko's and Slavko's house numbers.
+Output
+Print the time required to get from Mirko's to Slavko’s house in minutes
+Input
+3 4
+Output
+1
+Input
+8 20
+Output
+6
+--------------------------------------------------------------------------------------------------------------------------------
+Task 2
+Description
+Mirko and Slavko are playing their version of tennis. One set in a tennis match consists of several games.
+You are given results of N sets played between Mirko and Slavko, formatted as X:Y,
+where X represents the number of games won by Mirko and Y represents the number of games won by Slavko in one set.
+The player with more games won wins the set. Determine the number of sets won by Mirko and Slavko!
+Input
+The first line contains a positive integer N (1 ≤ N ≤ 100) - the number of sets played.
+In the next N input lines you are given the set results, formatted as X:Y. X will always be different than Y. (1 <= X, Y <= 100)
+Output
+In the first line of output write the solution, formatted as A:B where A represents the number of sets won by Mirko
+and B represents the number of sets won by Slavko. Note that A + B must be equal to N.
+Example
+
+Input:
+2
+6:4
+4:6
+
+Output:
+1:1
+
+Input
+3
+12:8
+15:11
+7:1
+
+Output
+3:0
+--------------------------------------------------------------------------------------------------------------------------------
+Task 3
+Description
+
+Mirko has recently started encrypting his devices with passwords. Mirko's brother Slavko found the whole thing really suspicious,
+so he decided to install a keylogger on his laptop to find out his passwords and discover what Mirko is hiding.
+A keylogger is a tool which registers each key pressed on keyboard and saves it to a log file.
+Given the sequence of keys pressed by Mirko while entering his password, help Slavko solve the mystery and find out Mirko's password.
+You may assume that Mirko uses only English letters, the caps-lock key and the backspace key,
+and that his password consists of at least one character.
+Input
+The first line contains a positive integer N (1 ≤ N ≤ 200), the number of keys pressed by Mirko.
+N lines follow, each of them containing the keys pressed by Mirko, formatted as follows:
+
+* backspace if it's the backspace key,
+* caps if it's the caps-lock key or
+* a lowercase letter of the English alphabet.
+
+Output
+Print Mirko's password.
+Example
+
+Input:
+5
+a
+caps
+b
+caps
+c
+
+Output:
+aBc
+
+Input:
+9
+a
+b
+caps
+b
+caps
+c
+backspace
+backspace
+k
+
+Output:
+abk
+--------------------------------------------------------------------------------------------------------------------------------
+Task 4
+Description
+
+Bob is working as a stamp designer. Recently he drew 2 stamp designs on separate transparent papers.
+Each stamp can be described as a sequence of colored rectangles. None of the rectangles of the same stamp overlap.
+Unfortunately, he wasn't satisfied with the two designs, so he decided to merge them into one by placing the transparent paper
+with the first design on top of the other paper. Determine the total colored area of the merged designs.
+Input
+The first line contains a positive integer N (1 ≤ N ≤ 50), the number of rectangles of the first stamp. Then N lines follow,
+each representing one rectangle on the first stamp described with four integers: X1, Y1, X2 and Y2 (0 ≤ X1 < X2 ≤ 10000, 0 ≤ Y1 < Y2 ≤ 10000).
+(X1, Y1) is the bottom-left and (X2, Y2) is the top-right coordinate. The following line contains a positive integer M (1 ≤ M ≤ 50),
+the number of rectangles of the second stamp. Then M lines follow, each containing four integers X1, Y1, X2 and Y2
+(0 ≤ X1 < X2 ≤ 10000, 0 ≤ Y1 < Y2 ≤ 10000). (X1, Y1) is the bottom-left and (X2, Y2) is the top-right coordinate of the second stamp.
+Output
+Print the colored area after merging the 2 stamps.
+Scoring
+Test cases worth 20% of total points: N = M = 1.
+Test cases worth additional 40% of total points: X1, Y1, X2, Y2 ≤ 30.
+Example
+
+Input:
+1
+2 2 4 4
+1
+3 3 5 5
+
+Output:
+7
+
+Input:
+2
+1 1 5 4
+2 4 9 5
+2
+4 4 8 6
+2 1 6 2
+
+Output
+24
+
+Explanation The first picture shows the first stamp, the second picture shows the second stamp and the third picture shows the merged stamps.
+The total area filled with colors on the merged stamps is 24.
+https://problems.sphere-engine.com/problems/STAMP/resources/get/pic1.png
+https://problems.sphere-engine.com/problems/STAMP/resources/get/pic2.png
+https://problems.sphere-engine.com/problems/STAMP/resources/get/pic3.png
+
+--------------------------------------------------------------------------------------------------------------------------------
+Task 5
+Description
+
+You're given a chessboard consisting of N rows and N columns. The rows and columns are labeled with numbers from 1 to N.
+You're also given K figures and their positions on the board. Each figure can be either a rook or a bishop.
+Find the area of the largest piece of the board with unaffected cells.
+Input
+The first line contains positive integers N (1 <= N <= 15) and K (1 <= K <= 10), the numbers from the task description.
+K lines follow, each formatted as: type_of_the_figure X Y where type_of_the_figure can be “rook” or “bishop”,
+X is the row label and Y is the column label. You may assume that all of the figures are on different positions.
+Output
+Print the area of the largest poece of the board with unaffected cells.
+Scoring
+Test cases worth 20% of total points: K = 1 and only one rook figure.
+Test cases worth additional 20% of total points: K = 1 and only one bishop figure.
+Test cases worth additional 20% of total points: K <= 10 and only rook figures.
+Test cases worth additional 20% of total points: K <= 10 and only bishop figures.
+Example
+
+Input:
+8 1
+rook 4 4
+
+Output:
+16
+
+Explanation
+The largest rectangle has corners at positions (5,5), (5, 8), (8, 5), (8,8)
+
+Input:
+7 3
+rook 4 5
+bishop 6 4
+bishop 6 7
+
+Output:
+9
+
+Explanation
+Yellow fields in the picture below are affected. Blue borders indicate the largest unaffected piece of the board.
+https://problems.sphere-engine.com/problems/CHESS/resources/get/slika.png
+--------------------------------------------------------------------------------------------------------------------------------
+Task 6
+Description
+
+Mirko and Slavko are playing a game. There is a sequence of N natural numbers in front of them. Mirko and Slavko are taking turns.
+Mirko plays first. In each turn a player selects one of the numbers and divides it by one of its prime factors if it is possible.
+The game is over when all of the numbers are equal to 1. The first player who can't make a move loses.
+Determine the winner of the game and the total number of turns required to finish it.
+Input
+The first line contains a positive integer N (1 ≤ N ≤ 100), the length of the array of numbers.
+The second line contains N positive integers separated by space Ai (1 ≤ Ai ≤ 1000000000), the initial elements of the array.
+Output
+In the first line print the name of the winner, either Mirko or Slavko. In the second line print the required number of turns to finish the game.
+Scoring
+Test cases worth 20% of total points: N = 1, Ai ≤ 100.
+Test cases worth additional 20% of total points: N = 1, Ai ≤ 1000000000. Test cases worth additional 30% of total points: N ≤ 100, Ai ≤ 100.
+Example
+
+Input:
+1
+15
+
+Output:
+Slavko
+2
+
+Explanation
+In the first step Mirko can divide the number 15 by either 3 or 5. In both cases the resulting quotient will be a prime number,
+so Slavko can divide it by itself and win.
+
+Input
+5
+5 3 8 9 4
+
+Output
+Mirko
+9
+--------------------------------------------------------------------------------------------------------------------------------
+Task 7
+Description
+
+You're given a picture constisting of N × M pixels which can be described as a matrix with N rows and M columns.
+The color of each pixel is written in a cell of the matrix as a lowercase letter of the English alphabet (a-z).
+For the purposes of the task, a 2d-palindrome is defined as a picture which looks the same when rotated by 180 degrees.
+Your task is to cut a K × K sized 2d-palindrome from the given picture in such a way that the number K is the largest possible.
+Input
+The first line contains positive integers N and M (1 ≤ N, M ≤ 500), the dimensions of the picture. N lines follow,
+each containing M characters which represent the given picture.
+Output
+Print the largest possible number K from the task description.
+Scoring
+Test cases worth 30% of total points: N, M ≤ 20.
+Test cases worth additional 20% of total points: N, M ≤ 100.
+Test cases worth additional 30% of total points: N, M ≤ 250.
+Example
+
+Input:
+5 5
+abaaa
+acaab
+aacaa
+aabaa
+acaaa
+
+Output:
+4
+
+Explanation:
+The largest 2d-palindrome that can be cut from the given picture is the one whose top-left corner is at cell (1, 1) and bottom-right corner is at cell (4, 4).

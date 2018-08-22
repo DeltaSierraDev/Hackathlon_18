@@ -1,0 +1,243 @@
+*******************************************************************************************************************************
+Cycle 1
+*******************************************************************************************************************************
+Task 1
+Description
+
+You're given an array A consisting of N positive integers. For each ordered pair (i, j) (1 ≤ i, j ≤ N, i != j),
+if it is true that Ai & Aj = Aj (& is the binary and operation), then you should add a value (i - j)2 to the result
+(the result is equal to 0 at the beginning). Since the final result can be very large, we're only interested in the result modulo 1 000 000 007.
+Input
+
+The first line of input contains an integer N (1 ≤ N ≤ 200 000),
+The second line contains N positive integers Ak (1 ≤ Ak ≤ 10 000).
+Output
+
+Print the result modulo 1 000 000 007.
+Scoring
+
+In test cases worth 40% of total points, N will be ≤ 1000.
+In test cases worth additional 30% of total points, Ak will be ≤ 500.
+Examples
+Input
+3
+8 6 8
+Output
+8
+Explanation: There are ordered pairs that meet the required condition: (1, 3) and (3, 1), so the final answer is (1 - 3)2 + (3 - 1)2 = 8.
+
+Input
+5
+3 1 5 2 2
+Output
+29
+--------------------------------------------------------------------------------------------------------------------------------
+Task 2
+Description
+
+Mirko is a teacher in a high school in Zagreb. In his class there are N students. Mirko knows that the sum of their heights is X (in cm).
+Today, Mirko is measuring the students' height again, but one student is missing. You are given a list of N-1 students' heights.
+Find the height of the missing student, assuming that none of the students' heights has changed.
+Input
+In the first line you are given natural numbers N and X separated with space (1 <= N <= 40), (100 <= X <= 10 000)
+In the second line you are given N - 1 natural numbers separated by space, the heights of N-1 students, all numbers are in range [100, 250]
+Output
+In the first line of output write the missing student height! (It’s not possible to be negative or zero)
+
+Input
+5 900
+172 186 181 181
+
+Output
+180
+--------------------------------------------------------------------------------------------------------------------------------
+Task 3
+Description
+
+Slavko is writing an important document for his class tomorrow. His document consist of one long sentence,
+containing only words of lowercase letters of the English alphabet.
+Now he wants to format his sentence using one of three alignments that are supported by editor: left, right or center.
+The editor displays each row of text with exactly W characters, which can either be a letter if it's a part of word, or space
+(denoted with '.' - dot). Given the alignment that Mirko choose, the width of each row W, and the sentence, determine the look of the editor's display.
+Input
+
+The first line contains an integer W (15 ≤ W ≤ 100).
+The second line contains a string that can either be "left", "right" or "center", denoting the alignment.
+The third line contains the sentence consisting of 100 words max. You may assume each word can fit the width of the editor.
+Output
+
+Output the editor's display. Each row should consist of exactly W characters with blankspaces denoted with dots.
+In the case when the text should be centered, and the blankspaces can't be divided evenly to both sides,
+the right side should contain one dot more than the left side of the row.
+Examples
+
+Input
+20 center quick brown fox jumps over the lazy dog
+
+Output
+
+
+..quick.brown.fox...
+jumps.over.the.lazy.
+........dog.........
+
+Input
+15 right ping pong table tennis skiing bowling
+
+Output
+
+
+ping.pong.table
+..tennis.skiing
+........bowling
+
+--------------------------------------------------------------------------------------------------------------------------------
+Task 4
+Description
+
+Mirko has N candies. He wants to divide them into smaller groups such that every group has at least one candy and the number of candies is equal in every group.
+Example: Mirko has 6 candies. He can divide those candies in a total of 6 different ways:
+1st way: 6 groups with 1 candy
+2nd way: 3 groups with 2 candies
+3rd way: 2 groups with 3 candies
+4th way: 1 group with 6 candies
+Write the total number of different ways of dividing candies to the output. The ways differ by the number of candies in each group.
+Input
+In the first line you are given the number N (1 <= N <= 1010)
+Output
+In the first line write the total number of ways described in the text
+Scoring
+In 20%: (1 <= N <= 10)
+In next 20%: (1 <= N <= 1000)
+In next 30%: (1 <= N <= 100 000)
+
+
+Input
+6
+
+Output
+4
+
+Input
+11
+
+Output 2
+--------------------------------------------------------------------------------------------------------------------------------
+Task 5
+Description
+
+Your task is to draw a tree. A tree consists of N levels of branches, the first level being the trunk which grows from the bottom up.
+The length of all branches at the level k is equal to Ak units. At the point where a branch of level k (1 ≤ k < N) ends,
+two new branches of level k+1 start to grow, each of them growing at the angle of 45 degrees from the parent branch
+(one 45 degrees clockwise, and the other counter-clockwise from the parent branch).
+
+To get a better idea about how the tree grows, look at the picture below which consist of 4 levels of branches the lengths of which are
+4, 3, 2, 1, in that order. The numbers on the right picture indicate the level of the branch.
+You may assume that there won't be two overlapping branches of the tree.
+
+Input
+
+The first line of input contains integer N (1 ≤ N ≤ 10), the number of levels of branches.
+The second line of input contains N integers Ak (1 ≤ Ak ≤ 50), k-th number representing the length of the branches at level k.
+Output
+
+Your task is to print the matrix containing only characters '.' (dot) and '*' (asterisk),
+Each part of each branch should be visible and denoted with an asterisk. There shouldn't be any empty borders (containing only dots).
+Scoring
+
+In tests worth 20% of total points, N = 2.
+In tests worth 30% of total points, N = 3.
+In tests worth 20% of total points, N = 4.
+Example
+
+Input
+5
+3 4 2 1 1
+
+Output
+
+
+...*.*.....*.*...
+..**.**...**.**..
+.*..*.......*..*.
+**..*.......*..**
+..***.......***..
+**...*.....*...**
+.*....*...*....*.
+.......*.*.......
+........*........
+........*........
+........*........
+
+--------------------------------------------------------------------------------------------------------------------------------
+Task 6
+Description
+
+Mirko has a table of N rows (marked from 1 to N) and N columns (marked from 1 to N) of natural numbers. Slavko has Q sequential demands for Mirko.
+In one demand Slavko gives Mirko some data - position (X,Y), length A and number K - and asks Mirko to rotate the square submatrix
+whose upper-left corner is in (X,Y) - (row, column of table) and its length is A. Mirko must rotate the defined submatrix for K times for 90 degrees clockwise.
+Mirko has done all of Slavko’s demands sequentially (from 1 to Q (inclusively)) and wrote the final table. Now Mirko can’t remember the original table.
+You are given the final table and the list of Slavko’s demand (sequentially). Please find the original table!
+Input
+In the first line you are given the number N (1 <= N <= 50)
+In the next N lines you are given N numbers - the final table (contains natural numbers in range [1, 100])
+In the next line you are given the number Q (1 <= Q <= 50)
+In the next Q lines you are given X Y A K (1 <= X, Y <= N, X + A - 1 <= N, Y + A - 1 <= N, K <= 1 000 000)
+Output
+In N lines of output write N natural numbers separated with spaces - Mirko’s initial table
+
+Input
+3
+1 7 2
+8 6 3
+5 4 9
+2
+2 1 2 2
+1 2 2 1
+
+
+Output
+1 2 3
+4 5 6
+7 8 9
+
+Explanation: Let's start with the initial table:
+1 2 3
+4 5 6
+7 8 9
+After Slavko's first demand it becomes:
+1 2 3
+8 7 6
+5 4 9
+After Slavko's second demand it becomes:
+1 7 2
+8 6 4
+5 4 9
+Which is exactly same as the input table.
+--------------------------------------------------------------------------------------------------------------------------------
+Task 7
+Description
+
+You are given two words which consist out of lower case English letters. Write those words to the output such that every
+letter which appears in both words is substituted with an exclamation mark (punctuation ‘!’)
+Input
+In the first line you are given the first word, between 1 and 100 characters in length.
+In the second line you are given the second word, between 1 and 100 characters in length.
+Output
+In the first line write the first word transformed according to the rule
+In the second line write the second word transformed according to the rule
+
+Input
+tava
+krava
+
+Output
+t!!!
+kr!!!
+
+Input
+mojposao
+avion
+
+Output m!jp!s!!
+!vi!n

@@ -1,0 +1,117 @@
+*******************************************************************************************************************************
+Cycle 1
+*******************************************************************************************************************************
+Task 1
+
+Description
+Replace all characters equal to the first character of the input, except the first character, with an asterisk (*).
+
+Example
+Input:
+initialization
+Output:
+in*t*al*zat*on
+--------------------------------------------------------------------------------------------------------------------------------
+Task 2
+
+Description
+
+Count the number of occurances of each letter of the input string.
+Count ONLY LETTERS, converted to LOWERCASE. Skip numbers or any other characters.
+
+Return a string containing the letters converted to lowercase and sorted alphabetically,
+and their respective counts, separated by newlines, as described. Omit the last newline in the result.
+
+Input
+String
+Output
+String, composed of a row for each letter of the input string, formatted like this:
+{letter}:{count}{newline}
+
+Example
+Input:
+Hello world!
+Output:
+d:1
+e:1
+h:1
+l:3
+o:2
+r:1
+w:1
+--------------------------------------------------------------------------------------------------------------------------------
+Task 3
+
+Description
+
+Replace numbers with "*", letters with "-" and other characters with "?"
+Example
+
+Input:
+pi=3.14
+Output:
+--?*?**
+--------------------------------------------------------------------------------------------------------------------------------
+Task 4
+Description
+
+Replace "not ... bad" substring starting with NOT and ending with BAD) with "good" in the input.
+Input
+
+Sentence
+Output
+
+Sentence with replaced substring
+Example
+
+Input:
+This pizza is not too bad.
+Output:
+This pizza is good.
+--------------------------------------------------------------------------------------------------------------------------------
+Task 5
+Description
+
+Replace all adjacent equal elements of the given array with one element.
+Input
+String, an array of numbers separated by space
+Output
+Array with no adjacent duplicates
+Example
+
+Input:
+4 4 4 2 8 8 7
+Output:
+4 2 8 7
+--------------------------------------------------------------------------------------------------------------------------------
+Task 6
+Description
+
+Return an array of 3 numbers less than 100 whose sum equals 194 and product equals 229824. Sort the numbers ascending.
+Output
+Print out an array of 3 numbers, like this:
+[a, b, c]
+--------------------------------------------------------------------------------------------------------------------------------
+Task 7
+Description
+
+You are in squareland. The world is a square board (side = 10 meters). The buildings are little squres (side = 1 meter).
+The blocks are placed on the board from top to bottom and stacked on top of other blocks.
+
+You have to put a large block (side = 5 meters) inside, but it may not fit. In that case, you have to remove some of the small blocks,
+but only as few as necessary to fit the big block.
+
+Your input is an array of numbers, corresponding to the number of small blocks in each column of the board.
+Return the minimal number of small blocks to remove to fit the big block.
+
+https://problems.sphere-engine.com/problems/SQUARES/resources/get/screenshot-from-2018-02-27-18-06-04.png
+
+Input
+String, an array of numbers separated by a single space.
+Output
+A number. Remember, only the minimal solution correct.
+Example
+Input:
+10 10 10 10 10 0 0 1 5 1
+Output:
+7
